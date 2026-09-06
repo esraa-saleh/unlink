@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Unlink cluster rules</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+<main>
+  <div class="brand">UNLINK</div>
+  <h1>State-sharing clusters</h1>
+  <p>
+    A cluster is the explicit exception to isolation-by-default. URLs matching the
+    same cluster are allowed to share a Firefox Container instance.
+  </p>
+
+  <section class="help">
+    <strong>Rule format</strong>
+    <code>{"host":"docs.google.com"}</code>
+    <code>{"host":"*.example.com"}</code>
+    <code>{"host":"example.com","pathPrefix":"/app"}</code>
+  </section>
+
+  <textarea id="editor" spellcheck="false"></textarea>
+
+  <div class="actions">
+    <button id="save">SAVE RULES</button>
+    <button id="reset" class="secondary">RESET BUILT-INS</button>
+  </div>
+  <div id="status"></div>
+</main>
+<script src="options.js"></script>
+</body>
+</html>

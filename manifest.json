@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "Unlink \u2014 State Sharing Clusters",
+  "version": "4.0.7",
+  "description": "Unlink v4.0.7: minimal extension popup with Demo Dashboard, New Ephemeral Identity, and Edit Cluster Rules.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
+    "contextualIdentities",
+    "cookies",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Unlink"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "web_accessible_resources": [
+    "chooser.html",
+    "chooser.js",
+    "chooser.css",
+    "demo.html",
+    "demo.js",
+    "demo.css",
+    "dashboard.html",
+    "dashboard.css",
+    "dashboard.js"
+  ],
+  "applications": {
+    "gecko": {
+      "id": "unlink-v3@example.local",
+      "strict_min_version": "109.0"
+    }
+  }
+}

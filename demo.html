@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Unlink — Live Demo</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <main>
+    <div class="eyebrow">UNLINK · LIVE DEMO</div>
+    <h1>Share state only where functionality needs it.</h1>
+    <p class="lead">
+      This page drives the real extension. The buttons below open actual sites, and
+      Unlink decides whether to reuse a state-sharing cluster or create a fresh container.
+    </p>
+
+    <section class="hero-grid">
+      <div class="panel">
+        <div class="label">KEEP TOGETHER</div>
+        <h2>Productivity state</h2>
+        <p>Gmail, Docs and Drive can share one authenticated Google session.</p>
+        <div class="flow">
+          <button data-url="https://mail.google.com/">Open Gmail</button>
+          <span>→</span>
+          <button data-url="https://docs.google.com/">Open Docs</button>
+          <span>→</span>
+          <button data-url="https://drive.google.com/">Open Drive</button>
+        </div>
+        <div class="expect">Expected: same <strong>Google Productivity</strong> container.</div>
+      </div>
+
+      <div class="panel">
+        <div class="label isolation">ISOLATE</div>
+        <h2>Independent search</h2>
+        <p>A new Google Search does not need access to your Gmail/Docs state.</p>
+        <div class="flow">
+          <button id="openSearch">Open fresh Google Search</button>
+        </div>
+        <div class="expect">Expected: a new <strong>Ephemeral</strong> container.</div>
+      </div>
+    </section>
+
+    <section class="panel demo-path">
+      <div class="label">60-SECOND DEMO</div>
+      <ol>
+        <li><strong>Open Gmail</strong> and sign in.</li>
+        <li><strong>Open Docs</strong>. Your Google session should still work.</li>
+        <li><strong>Open fresh Google Search</strong>. It should be isolated from Gmail.</li>
+        <li>Come back here and inspect the routing decisions below.</li>
+      </ol>
+      <div class="actions">
+        <button id="newGoogle">+ Create second Google Productivity instance</button>
+        <button id="refresh" class="secondary">Refresh status</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="label">LIVE EXTENSION STATUS</div>
+      <div id="statusGrid" class="status-grid"></div>
+      <div class="decision-wrap">
+        <div class="small">LAST ROUTING DECISION</div>
+        <div id="lastDecision" class="decision">Loading…</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="label">WHAT THIS PROVES</div>
+      <div class="proof-grid">
+        <div>
+          <strong>Usability</strong>
+          <p>Services that need the same session can share state.</p>
+        </div>
+        <div>
+          <strong>Isolation</strong>
+          <p>Unrelated first-party activity does not automatically inherit that state.</p>
+        </div>
+        <div>
+          <strong>Multiple identities</strong>
+          <p>The same service cluster can have multiple isolated instances.</p>
+        </div>
+      </div>
+      <p class="foot">
+        Containers isolate cookies and site storage. They do not by themselves change IP address,
+        device fingerprint, or account identity.
+      </p>
+    </section>
+  </main>
+
+  <script src="demo.js"></script>
+</body>
+</html>

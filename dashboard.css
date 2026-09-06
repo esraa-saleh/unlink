@@ -1,0 +1,18 @@
+
+:root{color-scheme:dark;--bg:#07090d;--panel:#10151c;--card:#0a0e13;--line:#27313d;--text:#f6f8fb;--muted:#98a4b1;--cyan:#7dd3fc;--green:#86efac;--red:#fca5a5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,sans-serif}
+main{max-width:1180px;margin:auto;padding:42px 24px 72px}.eyebrow,.section-title{font-size:10px;font-weight:950;letter-spacing:.15em;color:var(--cyan)}
+h1{font-size:48px;line-height:1.02;margin:7px 0 10px}header p,.muted{color:var(--muted)}
+.panel{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:19px;margin-top:15px}
+.trace,.toolbar,.chips{display:flex;flex-wrap:wrap;gap:7px;align-items:center}.toolbar{margin-top:12px}
+button{border:0;border-radius:10px;background:var(--cyan);color:#061018;font-weight:900;padding:9px 11px;cursor:pointer}
+button.secondary{background:#171e27;color:var(--text);border:1px solid var(--line)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:15px}.before{color:var(--red)}.after{color:var(--green)}
+h2{font-size:25px;margin:4px 0 10px}.metric{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 9px;background:var(--card);font-size:11px;margin-bottom:10px}
+.identity,.identity-row{border:1px solid var(--line);background:var(--card);border-radius:13px;padding:12px}.chips{margin-top:9px}.chip{border:1px solid var(--line);border-radius:999px;padding:5px 8px;font-size:10px}
+.identity-list{display:flex;flex-direction:column;gap:8px;min-height:90px}.identity-row-head{display:flex;justify-content:space-between;gap:10px}.identity-row-head span{color:var(--muted);font-size:10px}
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:9px}.stat{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:10px}.stat strong{display:block;font-size:22px}.stat span{font-size:9px;color:var(--muted)}
+.decision{margin-top:9px;border:1px dashed var(--line);border-radius:12px;padding:12px;min-height:70px;color:var(--muted)}
+.log{margin-top:8px;max-height:280px;overflow:auto}.log-row{display:grid;grid-template-columns:75px 120px 1fr;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05)}.url{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}
+.thesis{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+@media(max-width:800px){h1{font-size:36px}.compare,.two{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
